@@ -27,8 +27,8 @@
 <p><strong>GET</strong> <code>/flights</code></p>
 <p>Query Parameters:</p>
 <ul>
-  <li><code>from</code>: Departure airport name</li>
-  <li><code>to</code>: Arrival airport name</li>
+  <li><code>from</code>: Departure city name</li>
+  <li><code>to</code>: Arrival city name</li>
   <li><code>date</code>: Departure date in yyyy-mm-dd format</li>
 </ul>
 
