@@ -14,7 +14,7 @@
 <h4>Navigate to the project directory</h4>
 <pre>
   <code>
-    cd flight-scraper
+    cd flights-api
   </code>
 </pre>
 
