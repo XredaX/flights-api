@@ -7,7 +7,7 @@
 <h4>Clone the repository</h4>
 <pre>
   <code>
-    git clone https://github.com/XredaX/flight-api-node.git
+    git clone https://github.com/XredaX/flights-api.git
   </code>
 </pre>
 
