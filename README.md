@@ -44,15 +44,9 @@
 <img src="dist/res.PNG" alt="Result Image"/>
 
 
-<h2>Dependencies</h2>
-<ul>
-  <li>express</li>
-  <li>puppeteer-extra</li>
-  <li>puppeteer-extra-plugin-stealth</li>
-  <li>fs</li>
-  <li>path</li>
-  <li>date-fns</li>
-  <li>dotenv</li>
-</ul>
+<p>If you need any assistance with the code, feel free to contact me via email <strong><i class="fas fa-envelope"></i> redaelbettioui@gmail.com</strong> </p>
+<p>Or through LinkedIn <strong><a href="https://www.linkedin.com/in/reda-el-bettioui/">Reda El Bettioui</a></strong></p>
+
+<p>If you appreciate the work, please consider giving it a star ⭐ </p>
 
 
