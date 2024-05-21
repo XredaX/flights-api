@@ -14,6 +14,11 @@
 <pre><code>npm install</code></pre>
 
 <h2>Usage</h2>
+<p>Before starting the server, if you want to see the backend working, set <strong>headless</strong> to <strong>false</strong>:</p>
+<pre><code>headless: false</code></pre>
+<p>If not, leave it as <strong>true</strong>:</p>
+<pre><code>headless: true</code></pre>
+
 <p>To start the server, run the following command:</p>
 <pre><code>npm run start</code></pre>
 
