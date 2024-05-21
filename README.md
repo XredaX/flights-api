@@ -5,33 +5,17 @@
 <p>Before running the application, make sure you have Node.js and npm installed on your machine.</p>
 
 <h4>Clone the repository</h4>
-<pre>
-  <code>
-    git clone https://github.com/XredaX/flights-api.git
-  </code>
-</pre>
+<pre><code>git clone https://github.com/XredaX/flights-api.git</code></pre>
 
 <h4>Navigate to the project directory</h4>
-<pre>
-  <code>
-    cd flights-api
-  </code>
-</pre>
+<pre><code>cd flights-api</code></pre>
 
 <h4>Install dependencies</h4>
-<pre>
-  <code>
-    npm install
-  </code>
-</pre>
+<pre><code>npm install</code></pre>
 
 <h2>Usage</h2>
 <p>To start the server, run the following command:</p>
-<pre>
-  <code>
-    npm run start
-  </code>
-</pre>
+<pre><code>npm run start</code></pre>
 
 <p>Once the server is running, you can access the API endpoint to retrieve flight information.</p>
 <h3>API Endpoint</h3>
