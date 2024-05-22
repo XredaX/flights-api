@@ -33,11 +33,7 @@
 </ul>
 
 <p>Example Request:</p>
-<pre>
-  <code>
-    http://localhost:4000/flights?from=Oujda&to=Rabat&date=2024-07-15
-  </code>
-</pre>
+<pre><code>http://localhost:4000/flights?from=Oujda&to=Rabat&date=2024-07-15</code></pre>
 <p>Make sure to change the configuration to match your setup</p>
 
 <p>The Result:</p>
