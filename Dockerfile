@@ -1,48 +1,23 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18
+# Use an official Node.js runtime as the base image
+FROM node:20-slim
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
+# Copy package.json and package-lock.json into the container
 COPY package*.json ./
 
-# Install Node.js dependencies
+# Install dependencies
 RUN npm install
 
-# Install system dependencies required by Puppeteer
-RUN apt-get update && apt-get install -y \
-    wget \
-    gnupg \
-    ca-certificates \
-    fonts-liberation \
-    libappindicator3-1 \
-    libasound2 \
-    libatk1.0-0 \
-    libcups2 \
-    libdbus-1-3 \
-    libgdk-pixbuf2.0-0 \
-    libnspr4 \
-    libnss3 \
-    libxcomposite1 \
-    libxrandr2 \
-    libxss1 \
-    libxtst6 \
-    xdg-utils \
-    --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/*
-
-# Copy the rest of the application code to the working directory
+# Copy the rest of the project files into the container
 COPY . .
 
 # Compile TypeScript to JavaScript
 RUN npm run build
 
-# Set the Puppeteer environment variable to use Chromium in the container
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome
-
-# Expose the port that the application runs on
+# Expose the application port
 EXPOSE 4000
 
-# Command to run the application
-CMD ["node", "dist/index.js"]
+# Start the server
+CMD ["npm", "start"]
