@@ -10,11 +10,8 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the project files into the container
+# Copy the rest of the project files into the container, including the JSON file
 COPY . .
-
-# Ensure the JSON file is copied to the `dist` directory
-RUN cp ./src/airport_codes.json ./dist/
 
 # Compile TypeScript to JavaScript
 RUN npm run build
