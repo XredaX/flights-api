@@ -44,7 +44,6 @@ COPY . .
 
 # Compile TypeScript to JavaScript
 RUN npm run build
-COPY src/airport_codes.json dist/airport_codes.json
 
 # Expose the application port
 EXPOSE 4000
