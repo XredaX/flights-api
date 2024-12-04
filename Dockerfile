@@ -1,4 +1,7 @@
-FROM node:20
+FROM node:20-slim
+
+# Add Debian repositories
+RUN echo "deb http://deb.debian.org/debian bookworm main" > /etc/apt/sources.list
 
 # Install Puppeteer dependencies
 RUN apt-get update && apt-get install -y \
@@ -28,7 +31,7 @@ RUN apt-get update && apt-get install -y \
   ca-certificates \
   fonts-noto-color-emoji
 
-# Continue with your existing Dockerfile instructions
+# Continue with the rest of your Dockerfile
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
