@@ -1,5 +1,4 @@
-# Use an official Node.js runtime as the base image
-FROM node:20-slim
+FROM node:20
 
 # Install Puppeteer dependencies
 RUN apt-get update && apt-get install -y \
@@ -25,28 +24,15 @@ RUN apt-get update && apt-get install -y \
   libu2f-udev \
   libdbus-1-3 \
   fonts-liberation \
-  libgbm1 \
   xdg-utils \
   ca-certificates \
   fonts-noto-color-emoji
 
-# Set the working directory inside the container
+# Continue with your existing Dockerfile instructions
 WORKDIR /app
-
-# Copy package.json and package-lock.json into the container
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
-
-# Copy the rest of the project files into the container, including the JSON file
 COPY . .
-
-# Compile TypeScript to JavaScript
 RUN npm run build
-
-# Expose the application port
 EXPOSE 4000
-
-# Start the server
 CMD ["npm", "start"]
